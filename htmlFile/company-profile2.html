@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <title>书城</title>
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/page.css">
+    <script src="../js/jquery-1.11.1.js"></script>
+    <script src="../js/swipe.js"></script>
+</head>
+
+<body>
+<div class="header">
+	<div class="container">
+    	<div class="row">
+        	<div class="col-md-6 logo pull-left">
+            	<a href="#"><img src="../images/logo.jpg"></a>
+            </div>
+            <div class="col-md-6 pull-right">
+            	<div class="collect text-right">
+					<a href="login.html" onclick="SetHome(this,window.location)">登录</a> | 
+					<a href="register.html" onclick="SetFavourite(document.title,window.location)">注册</a>
+				</div>
+                <div class="search">
+					<form method="get" id="searchform" action="/demos/finance/index.php">
+						<input name="s" id="s" type="text" class="text" placeholder="新闻/书名/ISBN/资源..." value="">
+						<div class=""><i class="submit fa fa-search"></i></div>
+					</form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+    	<div class="container">
+        	<ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="news-centre.html">新闻中心</a></li>
+                <li class="select"><a href="company-profile.html">企业概况</a></li>
+                <li><a href="distribution.html">新华分销</a></li>
+                <li><a href="books-city.html">网上书城</a></li>
+                <li><a href="product-list.html">产品列表</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+	<div class="bg-gray pd5-20">
+		<div class="container">首页>企业概况>企业简介
+		</div>
+	</div>
+<div class="container">
+    <div class="category">
+        <div class="clearfix">
+			<div class="cat-title"><span>企业简介</span></div>
+			<div class="pd20-B10 font-gray2">
+				中国石油大学（华东）是教育部直属全国重点大学，是国家“211工程”和“985工程优势学科创新平台”高校，是高水平行业特色大学优质资源共享联盟成员高校，是“卓越工程师教育培养计划”、“111计划”、“国家建设高水平大学公派研究生项目”、千人计划重点建设的行业特色型大学入选高校之一。中国石油大学是教育部和五大能源企业集团公司、教育部和山东省人民政府共建的高校，是石油、石化高层次人才培养的重要基地，被誉为“石油科技人才的摇篮”，已成为一所以工为主、石油石化特色鲜明、多学科协调发展的大学。
+					学校始建于1953年，1988年，更名为石油大学，逐步形成山东、北京两地办学的格局，1997年，石油大学正式进入国家“211工程”首批重点建设的高等学校行列；2005年1月，学校更名为中国石油大学；2010年，学校成为国家首批实施“卓越工程师教育培养计划”的61所试点高校之一 。
+					据2014年7月学校官网显示，学校有青岛、东营两个校区，校园总面积4751亩，建筑面积110万平方米，图书馆藏书总量675.8万册。学校设有17个教学院部，设置60个本科专业，10个博士后流动站，11个博士学位授权一级学科，33个硕士学位授权一级学科，有全日制在校本科生近20000人、研究生5000余人，留学生700余人，函授网络在籍生70000余人。
+					
+					</br>
+					</br>
+					一：机构设制人员情况
+					</br>
+					</br>学校设有17个教学院部，设置60个本科专业，10个博士后流动站，11个博士学位授权一级学科，33个硕士学位授权一级学科，有全日制在校本科生近20000人、研究生5000余人，留学生700余人，函授网络在籍生70000余人。
+			</div>
+		
+		</div>
+    </div>   
+</div>
+
+<div class="footer">
+	<div class="container clearfix">
+    	<ul class="wd25">
+        	<li><a href="#" class="block"><h4>售后服务</h4></a></li>
+			<li><a href="#" class="block">退换货原则</a></li>
+        </ul>
+        <ul class="wd25">
+        	<li><a href="#" class="block"><h4>我的订单</h4></a></li>
+			<li><a href="#" class="block">订单状态的含义</a></li>
+			<li><a href="#" class="block">订单费用计算</a></li>
+			<li><a href="#" class="block">订单的修改与取消</a></li>
+        </ul>
+		<ul class="wd25">
+        	<li><a href="#" class="block"><h4>订单支付</h4></a></li>
+			<li><a href="#" class="block">在线支付</a></li>
+			<li><a href="#" class="block">货到付款</a></li>
+			<li><a href="#" class="block">退款及发票制度</a></li>
+        </ul>
+		<ul class="wd25">
+        	<li><a href="#" class="block"><h4>联系我们</h4></a></li>
+			<li><a href="#" class="block">意见与建议</a></li>
+			<li><a href="#" class="block">联系我们</a></li>
+		</ul>
+    </div>
+	<div class="pic">
+        	Copyright©即墨城新华书店集团有限公司 All rights reserved 鲁ICP备11111111号-1
+        </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <title>书城</title>
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/page.css">
+    <script src="../js/jquery-1.11.1.js"></script>
+    <script src="../js/swipe.js"></script>
+</head>
+
+<body>
+<div class="header">
+	<div class="container">
+    	<div class="row">
+        	<div class="col-md-6 logo pull-left">
+            	<a href="#"><img src="../images/logo.jpg"></a>
+            </div>
+            <div class="col-md-6 pull-right">
+            	<div class="collect text-right">
+					<a href="login.html" onclick="SetHome(this,window.location)">登录</a> | 
+					<a href="register.html" onclick="SetFavourite(document.title,window.location)">注册</a>
+				</div>
+                <div class="search col-md-6 pull-left">
+					<form method="get" id="searchform" action="/demos/finance/index.php">
+						<input name="s" id="s" type="text" class="text" placeholder="新闻/书名/ISBN/资源..." value="">
+						<div class=""><i class="submit fa fa-search"></i></div>
+											
+					</form>
+
+                </div>
+				<div class="col-md-6 clearfix pull-right">
+					<a class="pull-right btn-indent" href="personal.html">个人中心
+					</a>
+					<a class="pull-right btn-shoping" href="shopping-cart.html"><i class="fa fa-shopping-cart font18"></i> 购物车 <span>0</span>
+					</a>
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+    	<div class="container">
+        	<ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="news-centre.html">新闻中心</a></li>
+                <li><a href="company-profile.html">企业概况</a></li>
+                <li><a href="distribution.html">新华分销</a></li>
+                <li><a href="books-city.html">网上书城</a></li>
+                <li><a href="product-list.html">产品列表</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container text-center pd20">
+	<div class="shopping-succeed pd-big">
+		<h3>下单成功</h3>
+		<p>请在<span class="font-red">0</span>天<span class="font-red">01</span>小时<span class="font-red">59</span>分<span class="font-red">30</span>秒内完成支付</p>
+		<p>订单金额<span class="font-red font20">￥66,66</span></p>
+
+	</div>
+	<div class="product-buy pd10 mgT10">
+		<a class="btn-red mgR0" href="payment-success.html">去支付</a>
+	</div>
+</div>
+
+<div class="footer">
+	<div class="container clearfix">
+    	<ul class="wd25">
+        	<li><a href="#" class="block"><h4>售后服务</h4></a></li>
+			<li><a href="#" class="block">退换货原则</a></li>
+        </ul>
+        <ul class="wd25">
+        	<li><a href="#" class="block"><h4>我的订单</h4></a></li>
+			<li><a href="#" class="block">订单状态的含义</a></li>
+			<li><a href="#" class="block">订单费用计算</a></li>
+			<li><a href="#" class="block">订单的修改与取消</a></li>
+        </ul>
+		<ul class="wd25">
+        	<li><a href="#" class="block"><h4>订单支付</h4></a></li>
+			<li><a href="#" class="block">在线支付</a></li>
+			<li><a href="#" class="block">货到付款</a></li>
+			<li><a href="#" class="block">退款及发票制度</a></li>
+        </ul>
+		<ul class="wd25">
+        	<li><a href="#" class="block"><h4>联系我们</h4></a></li>
+			<li><a href="#" class="block">意见与建议</a></li>
+			<li><a href="#" class="block">联系我们</a></li>
+		</ul>
+    </div>
+	<div class="pic">
+        	Copyright©即墨城新华书店集团有限公司 All rights reserved 鲁ICP备11111111号-1
+        </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">-->
+
+    <title>网上书城</title>
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/page.css">
+    <script src="../js/jquery-1.11.1.js"></script>
+    <script src="../js/swipe.js"></script>
+</head>
+
+<body>
+<div class="header">
+	<div class="container">
+    	<div class="row">
+        	<div class="col-md-6 logo pull-left">
+            	<a href="javascript:;"><img src="../images/logo.jpg"></a>
+            </div>
+            <div class="col-md-6 pull-right">
+            	<div class="collect text-right">
+					<a href="login.html" onclick="SetHome(this,window.location)">登录</a> | 
+					<a href="register.html" onclick="SetFavourite(document.title,window.location)">注册</a>
+				</div>
+                <div class="search">
+					<form method="get" id="searchform" action="/demos/finance/index.php">
+						<input name="s" id="s" type="text" class="text" placeholder="新闻/书名/ISBN/资源..." value="">
+						<div class=""><i class="submit fa fa-search"></i></div>
+					</form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+    	<div class="container">
+        	<ul>
+                <li class="select"><a href="index.html">首页</a></li>
+                <li><a href="news-centre.html">新闻中心</a></li>
+                <li><a href="company-profile.html">企业概况</a></li>
+                <li><a href="distribution.html">新华分销</a></li>
+                <li><a href="books-city.html">网上书城</a></li>
+                <li><a href="product-list.html">产品列表</a></li>
+				<li><a href="classify-all.html">全部分类</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--<div class="notice">
+	<div class="container">
+		<div id="scrollDiv">
+			<div class="tag">通知公告：</div> 
+			<ul style="margin-top: 0px;">								
+				<li><a href="#">贺军：金融政策重点将从宽松转向市场化改革</a></li>
+                <li><a href="#">中国生产力金融专业委员会  成立公告</a></li>
+            </ul>	
+		</div>
+    </div>
+</div>-->
+    
+<div class="container">
+    <div class="index-part1">
+    	<div class="">
+        	<section id="scrollbox">  
+                <div class="flash inner" id="slideWrapper" style="overflow: hidden;">
+                    <ul id="bannerImg" style="overflow: hidden;">
+                        <li>
+                            <a href="#"><img src="../images/slide1.jpg"/></a>
+                            
+                        </li>
+                        <li>
+                            <a href="#"><img src="../images/slide1.jpg"/></a>
+                            
+                        </li>
+                        <li>
+                            <a href="#"><img src="../images/slide1.jpg"/></a>
+                            
+                        </li>
+                        <li>
+                            <a href="#"><img src="../images/slide1.jpg"/></a>
+                            <!--<div class="title"><div class="text text-overflow1">2015互联网金融消费白皮书：上亿人有了财产性收入，理财不再是少数富人的专利</div></div>-->
+                        </li>
+                    </ul>
+                </div>
+                <div id="bannerTab" class="bannerTab">
+                    <ul id="bannerTab_li">
+                        <li id="1" class="v2_cur"></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        
+    </div>
+    
+    
+    <div class="index-part1">
+    	<div class="wd70">
+        	<div>
+            	<ul class="c-title tab-ul clearfix pd10">
+						<li class="select"><a>企业要闻</a></li>
+						<li><a>行业资讯</a></li>
+						<li><a>企业文化与风貌</a></li>
+						<a class="pull-right font14">
+							更多
+							<i class="fa fa-angle-double-right"></i>
+						</a>
+				</ul>
+				<div class="wd60">
+                <ul class="content border-bt-dashed">
+					<li>
+						 <a href="#" class="text">
+							2016“外研社杯”全国中小学英语大赛浙江赛区比赛圆满结束
+						 </a>
+					</li>
+				   <li>
+                        <a href="#" class="text"><div class="disc"></div>										即墨市新华携手支付宝口碑，开启双12狂欢购物节即墨市新华携手支付宝口碑，开启双12狂欢购物节</a>
+                        <span class="pull-right font-gray">2016-10-26</span>
+                    </li>
+                    <li>
+                        <a href="#" class="text"><div class="disc"></div>即墨市新华携手支付宝口碑，开启双12狂欢购物节</a>
+                        <span class="pull-right font-gray">2016-10-26</span>
+                    </li>
+                    <li>
+                        <a href="#" class="text"><div class="disc"></div>即墨市新华携手支付宝口碑，开启双12狂欢购物节</a>
+                        <span class="pull-right font-gray">2016-10-26</span>
+                    </li>
+                    <li>
+                        <a href="#" class="text"><div class="disc"></div>即墨市新华携手支付宝口碑，开启双12狂欢购物节</a>
+                        <span class="pull-right font-gray">2016-10-26</span>
+                    </li>
+                </ul>
+				<ul class="content">
+					<li class="font-red">
+						 <a class="text">
+							2016“外研社杯”全国中小学英语大赛浙江赛区比赛圆满结束
+						 </a>
+					</li>
+					<li>
+                        <a href="#" class="text"><div class="disc"></div>即墨市新华携手支付宝口碑，开启双12狂欢购物节即墨市新华携手支付宝口碑，开启双12狂欢购物节</a>
+                        <span class="pull-right font-gray">2016-10-26</span>
+                    </li>
+                    <li>
+                        <a href="#" class="text"><div class="disc"></div>即墨市新华携手支付宝口碑，开启双12狂欢购物节</a>
+                        <span class="pull-right font-gray">2016-10-26</span>
+                    </li>
+                    <li>
+                        <a href="#" class="text"><div class="disc"></div>即墨市新华携手支付宝口碑，开启双12狂欢购物节</a>
+                        <span class="pull-right font-gray">2016-10-26</span>
+                    </li>
+                    <li>
+                        <a href="#" class="text"><div class="disc"></div>即墨市新华携手支付宝口碑，开启双12狂欢购物节</a>
+                        <span class="pull-right font-gray">2016-10-26</span>
+                    </li>
+                </ul>
+				</div>
+				<a class="wd40">
+					<img class="pdBT10" src="../images/index1.jpg">
+				</a>
+            </div>
+            
+        </div>
+        <div class="wd30">
+			<a class="block bookCcity-a" href="books-city.html">
+				<img src="../images/index2.jpg">
+			</a>
+        	<ul class="c-title tab-ul clearfix pd0 mgT10"><li class="bg-red-o">通知公告</li>
+			<a class="pull-right font14">
+							更多
+							<i class="fa fa-angle-double-right"></i>
+			</a>
+			</ul>
+            <div class="content">
+					<h4 class="font16 text-overflow1">即墨城新华写手支付宝口碑，开启双12狂欢节</h4>
+					<div class="font12 font-gray">
+						——2016-12-15——
+					</div>
+				   <a class="text-overflow3 font12 font-gray block">
+						12月10日，“双12全球购物狂欢节”首日，也是5折狂欢日。即墨城新华书店作为支付宝口碑在全国新华书店行业内的唯一合作商，在全盛书店卖场开启购书狂欢。
+				   </a>
+            </div>
+			<div class="content">
+					<h4 class="font16 text-overflow1">即墨城新华写手支付宝口碑，开启双12狂欢节</h4>
+					<div class="font12 font-gray">
+						——2016-12-15——
+					</div>
+				   <a class="text-overflow3 font12 font-gray block">
+						12月10日，“双12全球购物狂欢节”首日，也是5折狂欢日。即墨城新华书店作为支付宝口碑在全国新华书店行业内的唯一合作商，在全盛书店卖场开启购书狂欢。
+				   </a>
+            </div>
+        </div>
+    </div>   
+    <div class="index-part2">
+        	<ul class="c-title2 tab-ul clearfix pd0">
+				<li class="title-select ">阅读与文化
+				</li>
+				<a class="pull-right font14">
+							更多
+					<i class="fa fa-angle-double-right"></i>
+				</a>
+			</ul>
+            <div class="content">
+                <div class="wd33">
+					<div class="wd30">
+						<div class="text-center time-div">
+							<p>09</p>
+							2016.12
+						</div>
+					</div>
+                	<div class="wd70">
+						<h4 class="font16 text-overflow1">悦览树：台风天气与阅读很配哦</h4>
+					   <a class="text-overflow4 font12 font-gray mgT20">
+							12月10日，“双12全球购物狂欢节”首日，也是5折狂欢日。即墨城新华书店作为支付宝口碑在全国新华书店行业内的唯一合作商，在全盛书店卖场开启购书狂欢。
+					   </a>
+					</div>
+                </div>
+				<div class="wd33">
+					<div class="wd30">
+						<div class="text-center time-div">
+							<p>09</p>
+							2016.12
+						</div>
+					</div>
+                	<div class="wd70">
+						<h4 class="font16 text-overflow1">悦览树：台风天气与阅读很配哦</h4>
+					   <a class="text-overflow4 font12 font-gray mgT20">
+							12月10日，“双12全球购物狂欢节”首日，也是5折狂欢日。即墨城新华书店作为支付宝口碑在全国新华书店行业内的唯一合作商，在全盛书店卖场开启购书狂欢。
+					   </a>
+					</div>
+                </div>
+				<div class="wd33">
+					<div class="wd30">
+						<div class="text-center time-div">
+							<p>09</p>
+							2016.12
+						</div>
+					</div>
+                	<div class="wd70">
+						<h4 class="font16 text-overflow1">悦览树：台风天气与阅读很配哦</h4>
+					   <a class="text-overflow4 font12 font-gray mgT20">
+							12月10日，“双12全球购物狂欢节”首日，也是5折狂欢日。即墨城新华书店作为支付宝口碑在全国新华书店行业内的唯一合作商，在全盛书店卖场开启购书狂欢。
+					   </a>
+					</div>
+                </div>
+            </div>
+    </div>
+    <div class="index-part2">
+        	<ul class="c-title2 tab-ul clearfix pd0">
+				<li class="title-select ">精品图书
+				</li>
+				<a class="pull-right font14">
+							更多
+					<i class="fa fa-angle-double-right"></i>
+				</a>
+			</ul>
+			<div class="content clearfix mgT10">
+				<a class="index-btn select-btn" href="product-list.html">新书上架</a>
+				<a class="index-btn" href="product-list.html">精品热销</a>
+				<a class="index-btn" href="product-list.html">人气推荐</a>
+				<a class="index-btn" href="product-list.html">特价专区</a>
+				<a class="index-btn" href="product-list.html">满减满赠</a>
+			</div>
+            <div class="content">
+                <div class="wd33-book">
+					<a class="clearfix" href="productDetails.html">
+					<div class="wd40">
+						<img src="../images/index-book2.jpg">
+					</div>
+                	<div class="wd60">
+						<h4 class="font16 text-overflow2 mg0 hg40">悦览树：台风天气与阅读很配哦</h4>
+						<div class="font-gray text-overflow1 hg25">
+						[日]稻盛和夫 著，曹岫云 译
+						</div>
+						<div class="font-red mgT10">
+							￥27.70
+						</div>
+					   <div class="text-overflow3 font-gray mgT10 hg65">
+							本书有稻盛和夫（北京）管理顾问有限公司董事长曹岫云先生亲子翻译。蔡秀云被稻盛和夫成为在中国的
+					   </div>
+
+					</div>
+					</a>
+					<div class="clearfix">
+						<a class="pull-right btn-red-o mgT10">购买</a>
+					</div>
+                </div>
+				<div class="wd33-book">
+					<a class="clearfix" href="productDetails.html">
+					<div class="wd40">
+						<img src="../images/index-book2.jpg">
+					</div>
+                	<div class="wd60">
+						<h4 class="font16 text-overflow2 mg0 hg40">悦览树：台风天气与阅读很配哦</h4>
+						<div class="font-gray text-overflow1 hg25">
+						[日]稻盛和夫 著，曹岫云 译
+						</div>
+						<div class="font-red mgT10">
+							￥27.70
+						</div>
+					   <div class="text-overflow3 font-gray mgT10 hg65">
+							本书有稻盛和夫（北京）管理顾问有限公司董事长曹岫云先生亲子翻译。蔡秀云被稻盛和夫成为在中国的
+					   </div>
+
+					</div>
+					</a>
+					<div class="clearfix">
+						<a class="pull-right btn-red-o mgT10">购买</a>
+					</div>
+                </div>
+				<div class="wd33-book">
+					<a class="clearfix" href="productDetails.html">
+					<div class="wd40">
+						<img src="../images/index-book2.jpg">
+					</div>
+                	<div class="wd60">
+						<h4 class="font16 text-overflow2 mg0 hg40">悦览树：台风天气与阅读很配哦</h4>
+						<div class="font-gray text-overflow1 hg25">
+						[日]稻盛和夫 著，曹岫云 译
+						</div>
+						<div class="font-red mgT10">
+							￥27.70
+						</div>
+					   <div class="text-overflow3 font-gray mgT10 hg65">
+							本书有稻盛和夫（北京）管理顾问有限公司董事长曹岫云先生亲子翻译。蔡秀云被稻盛和夫成为在中国的
+					   </div>
+
+					</div>
+					</a>
+					<div class="clearfix">
+						<a class="pull-right btn-red-o mgT10">购买</a>
+					</div>
+                </div>
+				<div class="wd33-book">
+					<a class="clearfix" href="productDetails.html">
+					<div class="wd40">
+						<img src="../images/index-book2.jpg">
+					</div>
+                	<div class="wd60">
+						<h4 class="font16 text-overflow2 mg0 hg40">悦览树：台风天气与阅读很配哦</h4>
+						<div class="font-gray text-overflow1 hg25">
+						[日]稻盛和夫 著，曹岫云 译
+						</div>
+						<div class="font-red mgT10">
+							￥27.70
+						</div>
+					   <div class="text-overflow3 font-gray mgT10 hg65">
+							本书有稻盛和夫（北京）管理顾问有限公司董事长曹岫云先生亲子翻译。蔡秀云被稻盛和夫成为在中国的
+					   </div>
+
+					</div>
+					</a>
+					<div class="clearfix">
+						<a class="pull-right btn-red-o mgT10">购买</a>
+					</div>
+                </div>
+				<div class="wd33-book">
+					<a class="clearfix" href="productDetails.html">
+					<div class="wd40">
+						<img src="../images/index-book2.jpg">
+					</div>
+                	<div class="wd60">
+						<h4 class="font16 text-overflow2 mg0 hg40">悦览树：台风天气与阅读很配哦</h4>
+						<div class="font-gray text-overflow1 hg25">
+						[日]稻盛和夫 著，曹岫云 译
+						</div>
+						<div class="font-red mgT10">
+							￥27.70
+						</div>
+					   <div class="text-overflow3 font-gray mgT10 hg65">
+							本书有稻盛和夫（北京）管理顾问有限公司董事长曹岫云先生亲子翻译。蔡秀云被稻盛和夫成为在中国的
+					   </div>
+
+					</div>
+					</a>
+					<div class="clearfix">
+						<a class="pull-right btn-red-o mgT10">购买</a>
+					</div>
+                </div>
+				<div class="wd33-book">
+					<a class="clearfix" href="productDetails.html">
+					<div class="wd40">
+						<img src="../images/index-book2.jpg">
+					</div>
+                	<div class="wd60">
+						<h4 class="font16 text-overflow2 mg0 hg40">悦览树：台风天气与阅读很配哦</h4>
+						<div class="font-gray text-overflow2 hg40">
+						[日]稻盛和夫 著，曹岫云 译
+						</div>
+						<div class="font-red mgT10">
+							￥27.70
+						</div>
+					   <div class="text-overflow3 font-gray mgT10 hg65">
+							本书有稻盛和夫（北京）管理顾问有限公司董事长曹岫云先生亲子翻译。蔡秀云被稻盛和夫成为在中国的
+					   </div>
+
+					</div>
+					</a>
+					<div class="clearfix">
+						<a class="pull-right btn-red-o mgT10">购买</a>
+					</div>
+                </div>
+				
+            </div>
+    </div>
+    
+    
+    
+    
+    <div class="index-part2">
+        	<ul class="c-title2 tab-ul clearfix pd0">
+				<li class="title-select ">友情链接
+				</li>
+				<a class="pull-right font14">
+							更多
+					<i class="fa fa-angle-double-right"></i>
+				</a>
+			</ul>
+            <div class="content link-friends">
+                <a class="block">新闻出版总署</a>
+				<a class="block">新闻出版总署</a>
+				<a class="block">新闻出版总署</a>
+				<a class="block">新闻出版总署</a>
+				<a class="block">新闻出版总署</a>
+				<a class="block">新闻出版总署</a>
+				<a class="block">新闻出版总署</a>
+				<a class="block">新闻出版总署</a>
+				<a class="block">新闻出版总署</a>
+				<a class="block">新闻出版总署</a>
+				<a class="block">新闻出版总署</a>
+				<a class="block">新闻出版总署</a>
+				<a class="block">新闻出版总署</a>
+				<a class="block">新闻出版总署</a>
+            </div>
+    </div>
+</div>
+
+<div class="footer">
+	<div class="container clearfix">
+    	<ul class="wd25">
+        	<li><a href="#" class="block"><h4>售后服务</h4></a></li>
+			<li><a href="#" class="block">退换货原则</a></li>
+        </ul>
+        <ul class="wd25">
+        	<li><a href="#" class="block"><h4>我的订单</h4></a></li>
+			<li><a href="#" class="block">订单状态的含义</a></li>
+			<li><a href="#" class="block">订单费用计算</a></li>
+			<li><a href="#" class="block">订单的修改与取消</a></li>
+        </ul>
+		<ul class="wd25">
+        	<li><a href="#" class="block"><h4>订单支付</h4></a></li>
+			<li><a href="#" class="block">在线支付</a></li>
+			<li><a href="#" class="block">货到付款</a></li>
+			<li><a href="#" class="block">退款及发票制度</a></li>
+        </ul>
+		<ul class="wd25">
+        	<li><a href="#" class="block"><h4>联系我们</h4></a></li>
+			<li><a href="#" class="block">意见与建议</a></li>
+			<li><a href="#" class="block">联系我们</a></li>
+		</ul>
+    </div>
+	<div class="pic">
+        	Copyright©即墨城新华书店集团有限公司 All rights reserved 鲁ICP备11111111号-1
+        </div>
+</div>
+</body>
+</html>

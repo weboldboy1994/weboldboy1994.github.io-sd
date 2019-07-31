@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <title>书城</title>
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/page.css">
+    <script src="../js/jquery-1.11.1.js"></script>
+    <script src="../js/swipe.js"></script>
+</head>
+
+<body>
+<div class="header">
+	<div class="container">
+    	<div class="row">
+        	<div class="col-md-6 logo pull-left">
+            	<a href="#"><img src="../images/logo.jpg"></a>
+            </div>
+            <div class="col-md-6 pull-right">
+            	<div class="collect text-right">
+					<a href="login.html" onclick="SetHome(this,window.location)">登录</a> | 
+					<a href="register.html" onclick="SetFavourite(document.title,window.location)">注册</a>
+				</div>
+                <div class="search col-md-6 pull-left">
+					<form method="get" id="searchform" action="/demos/finance/index.php">
+						<input name="s" id="s" type="text" class="text" placeholder="新闻/书名/ISBN/资源..." value="">
+						<div class=""><i class="submit fa fa-search"></i></div>
+											
+					</form>
+
+                </div>
+				<div class="col-md-6 clearfix pull-right">
+					<a class="pull-right btn-indent" href="personal.html">个人中心
+					</a>
+					<a class="pull-right btn-shoping" href="shopping-cart.html"><i class="fa fa-shopping-cart font18"></i> 购物车 <span>0</span>
+					</a>
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+    	<div class="container">
+        	<ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="news-centre.html">新闻中心</a></li>
+                <li><a href="company-profile.html">企业概况</a></li>
+                <li><a href="distribution.html">新华分销</a></li>
+                <li><a href="books-city.html">网上书城</a></li>
+                <li><a href="product-list.html">产品列表</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+	<div class="bg-gray pd5-20">
+		<div class="container">首页>新闻中心>企业要闻
+		</div>
+	</div>
+<div class="container">
+    <div class="category">
+    	<div class="clearfix">
+			<div class="productDetails-top-left">
+				<div class="search">
+					<a class="block text-center">
+						<img src="../images/index-book1.jpg">
+						
+					</a>
+					<div class="product-favorable-btn">满120减20</div>
+					<a class="product-probation-btn">试读</a>
+				</div>
+				<ul class="clearfix mgT20">
+					<li>
+						<a class="block">
+							<img height="45" src="../images/index-book1.jpg">
+						</a>
+					</li>
+					<li>
+						<a class="block">
+							<img height="45" src="../images/index-book1.jpg">
+						</a>
+					</li>
+					<li>
+						<a class="block">
+							<img height="45" src="../images/index-book1.jpg">
+						</a>
+					</li>
+					<li>
+						<a class="block">
+							<img height="45" src="../images/index-book1.jpg">
+						</a>
+					</li>
+					<li>
+						<a class="block">
+							<img height="45" src="../images/index-book1.jpg">
+						</a>
+					</li>
+				</ul>
+				<div class="mgT20">
+					<a class="mgL40">
+						<img class="pdB5" src="../images/product-start-2.png">
+						<span class="font-gray">收藏商品</span>
+					</a>
+				</div>
+			</div>
+			
+			<div class="productDetails-top-right">
+				<h3>解忧杂货店</h3>
+				<p>《白夜行》后东野圭吾倍受欢迎作品：不是推理小说，却扣人心弦</p>
+				<p class="mgT20 font-red">本产品参与满120元减20元<a class="font-red mgL20">详情</a></p>
+				<p class="mgT20">作者：东野圭吾 著，李迎春 译
+					<span class="mgL40">出版社：<span>南海出版公司</span></span>
+					<span class="mgL40">出版时间：<span>2015年05月</span></span>
+				</p>
+				<p class="product-evaluate mgT20">
+					<img src="../images/product-start-1.png">
+					<img class="mgL5" src="../images/product-start-1.png">
+					<img class="mgL5" src="../images/product-start-1.png">
+					<img class="mgL5" src="../images/product-start-1.png">
+					<img class="mgL5" src="../images/product-start-2.png">
+					<span>
+						（共有<span>84</span>条用户评论
+						<a>查看评论</a><a>写评论</a>）
+					</span>
+				</p>
+				<div class="bg-gray pd10">
+					<p>原&nbsp;&nbsp;&nbsp;价：<span class="mgL20 font12 font-gray through">￥39.50</span></p>
+					<div class="">活动价：<span class="mgL20 font18 font-red">￥ 32.50</span> （<span class="font-blue">81</span>折）为您节省<span class="font-red">￥7.50</span></div>
+				</div>
+				<div class="options pdBT5" id="option-1" value="1" data-required="1">
+					<span class="pull-left line30" id="optname1">价格： </span>
+					<ul class="size-option" value="1">
+												<input type="radio" name="option[1]" hidden="hidden" value="1" id="option-value-1">
+						<li onclick="chooseOption('1');" id="optionValueA1" class="">
+							<input type="hidden" id="optionPriceValue1" value="5">
+							<input type="hidden" id="optionBasepriceValue1" value="5">
+							<input type="hidden" id="optionPricePrefix1" value="+">
+							套餐						</li>
+												<input type="radio" name="option[1]" hidden="hidden" value="2" id="option-value-2" checked="checked">
+						<li onclick="chooseOption('2');" id="optionValueA2" class="select">
+							<input type="hidden" id="optionPriceValue2" value="9">
+							<input type="hidden" id="optionBasepriceValue2" value="9">
+							<input type="hidden" id="optionPricePrefix2" value="+">
+							加肉						</li>
+											</ul>
+				</div>
+				<div class="options pdBT5" id="option-1" value="1" data-required="1">
+					<span class="pull-left line30" id="optname1">价格： </span>
+					<ul class="size-option" value="1">
+												<input type="radio" name="option[1]" hidden="hidden" value="1" id="option-value-1">
+						<li onclick="chooseOption('1');" id="optionValueA1" class="">
+							<input type="hidden" id="optionPriceValue1" value="5">
+							<input type="hidden" id="optionBasepriceValue1" value="5">
+							<input type="hidden" id="optionPricePrefix1" value="+">
+							套餐						</li>
+												<input type="radio" name="option[1]" hidden="hidden" value="2" id="option-value-2" checked="checked">
+						<li onclick="chooseOption('2');" id="optionValueA2" class="select">
+							<input type="hidden" id="optionPriceValue2" value="9">
+							<input type="hidden" id="optionBasepriceValue2" value="9">
+							<input type="hidden" id="optionPricePrefix2" value="+">
+							加肉						</li>
+											</ul>
+				</div>
+				<div class="mgT10 pd10 relative">
+					优惠券<a class="font-gray mgL20 get-discount">领取优惠券</a>
+					<ul class="get-discount-ul relative hide">
+						<li class="clearfix">
+							<div class="pull-left">￥20</div>
+							<div class="pull-right">
+								满100减20
+								<a class="font-gray mgL5">已领</a>
+							</div>
+						</li>
+						<li class="clearfix">
+							<div class="pull-left">￥20</div>
+							<div class="pull-right">
+								满100减20
+								<a class="font-red mgL5">领取</a>
+							</div>
+						</li>
+						<li class="clearfix">
+							<div class="pull-left">￥20</div>
+							<div class="pull-right">
+								满100减20
+								<a class="font-red mgL5">领取</a>
+							</div>
+						</li>
+						<a class="discount-ul-close">
+							<i class="fa fa-times"></i>
+						</a>
+					</ul>
+				</div>
+				<div class="product-buy pd10">
+					<a class="btn-red" href="shopping-succeed.html">加入购物车</a>
+					<a class="btn-red-o"  href="shopping-buy.html">立即购买</a>
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		<div class="clearfix mgT20">
+			<ul class="productDetails-bottom-left clearfix">
+				<p class="mgB20">看过本商品的人还看了</p>
+				<li class="pd10 border-bt-dashed">
+					<a class="block">
+						<div class="wd100 text-center">
+							<img src="../images/index-book1.jpg">
+						</div>
+						<p class="text-left mgT10">男孩全书（套装共7册）[逻辑思维]</p>
+						<p class="text-left font-gray">
+							韩启德，邱伟元 编
+						</p>
+						<p class="clearfix">
+							<span class="font-red pull-left">￥198.00</span>
+						</p>
+					</a>
+				</li>
+				<li class="pd10 border-bt-dashed">
+					<a class="block">
+						<div class="wd100 text-center">
+							<img src="../images/index-book2.jpg">
+						</div>
+						<p class="text-left mgT10">男孩全书（套装共7册）[逻辑思维]</p>
+						<p class="text-left font-gray">
+							韩启德，邱伟元 编
+						</p>
+						<p class="clearfix">
+							<span class="font-red pull-left">￥198.00</span>
+						</p>
+					</a>
+				</li>
+				<li class="pd10 border-bt-dashed">
+					<a class="block">
+						<div class="wd100 text-center">
+							<img src="../images/index-book1.jpg">
+						</div>
+						<p class="text-left mgT10">男孩全书（套装共7册）[逻辑思维]</p>
+						<p class="text-left font-gray">
+							韩启德，邱伟元 编
+						</p>
+						<p class="clearfix">
+							<span class="font-red pull-left">￥198.00</span>
+						</p>
+					</a>
+				</li>
+				<li class="pd10 border-bt-dashed">
+					<a class="block">
+						<div class="wd100 text-center">
+							<img src="../images/index-book3.jpg">
+						</div>
+						<p class="text-left mgT10">男孩全书（套装共7册）[逻辑思维]</p>
+						<p class="text-left font-gray">
+							韩启德，邱伟元 编
+						</p>
+						<p class="clearfix">
+							<span class="font-red pull-left">￥198.00</span>
+						</p>
+					</a>
+				</li>
+
+			</ul>
+			
+			<div class="productDetails-bottom-right clearfix">
+				<ul class="productDetails-tab block clearfix">
+					<li>
+						<a class="block">
+						商品介绍
+						</a>
+					</li>
+					<li class="select">
+						<a class="block">
+						商品评价
+						</a>
+					</li>
+				</ul>
+				<div class="productDetails-div1 hide">
+					<div class="productDetails-title clearfix">
+						<div>
+						解忧杂货店（精）》内容简介
+						</div>
+					</div>
+					<div class="mgT20 pd10">
+						<h4 class="font-orange">编辑重推：</h4>
+						<p class="font-orange2">
+							<img class="mgT-4" src="../images/product-start-0.png">
+							《<a class="font-red">白夜行</a>》后，东野奎吾最受欢迎作品
+						</p>
+						
+						<p class="font-orange2">
+							<img class="mgT-4" src="../images/product-start-0.png">
+							不是推理小说，却更扣人心弦
+						</p>
+						<p class="font-orange2">
+							<img class="mgT-4" src="../images/product-start-0.png">
+							荣获中央公文艺奖
+						</p>
+						<p class="font-orange2">
+							<img class="mgT-4" src="../images/product-start-0.png">
+							荣登纪伊国屋，成品，博客来，金石堂各大排行榜第一名
+						</p>
+						<p class="font-orange2">
+							<img class="mgT-4" src="../images/product-start-0.png">
+							荣登纪伊国屋，成品，博客来，金石堂各大排行榜第一名
+						</p>
+						<p class="font-orange2">
+							<img class="mgT-4" src="../images/product-start-0.png">
+							荣登纪伊国屋，成品，博客来，金石堂各大排行榜第一名荣登纪伊国屋，成品，博客来，金石堂各大排行榜第一名荣登纪伊国屋，成品，博客来，金石堂各大排行榜第一名荣登纪伊国屋，成品，博客来，金石堂各大排行榜第一名
+						</p>
+						<p class="font-gray mgT10">
+							&nbsp;&nbsp;&nbsp;僻静的道路上有一家店，不仅销售杂货，还提供烦恼资讯。无论你挣扎犹豫僻静的道路上有一家店，不仅销售杂货，还提供烦恼资讯。无论你挣扎犹豫僻静的道路上有一家店，不仅销售杂货，还提供烦恼资讯。无论你挣扎犹豫僻静的道路上有一家店，不仅销售杂货，还提供烦恼资讯。无论你挣扎犹豫
+						</p>
+					</div>
+				</div>
+				<div class="productDetails-div2">
+					<div class="productDetails-div2-head clearfix">
+						<div class="text-center div2-head-left">
+							<div class="font-red font30">100%</div><p class="font14">好评度</p>
+						</div>
+						<ul class="div2-head-right clearfix">
+							<li>
+								<span>好评（100%）</span>
+								<div>
+									<div class="Proportion-div">
+									</div>
+								</div>
+							</li>
+							<li>
+								<span>中评（0%）</span>
+								<div>
+									<div class="Proportion-div">
+									</div>
+								</div>
+							</li>
+							<li>
+								<span>差评（0%）</span>
+								<div>
+									<div class="Proportion-div">
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="mgT20 pd10">
+						<ul class="productDetails-div2-top">
+							<li>
+								<a class="font-red">
+								全部评价(<span>200+</span>)
+								</a>
+							</li>
+							<li>
+								<a>
+								晒图(<span>100</span>)
+								</a>
+							</li>
+							<li>
+								<a>
+								好评(<span>200+</span>)
+								</a>
+							</li>
+							<li>
+								<a>
+								中评(<span>2</span>)
+								</a>
+							</li>
+							<li>
+								<a>
+								差评(<span>1</span>)
+								</a>
+							</li>
+							<li>
+								<a>
+								<i class="fa fa-square-o mgR5"></i><!--<i class="fa fa-check-square mgR5"></i>-->只看当前商品评价(<span>200+</span>)
+								</a>
+							</li>
+						</ul>
+						<ul class="productDetails-div2-main">
+							<li>
+								<div class="div2-main-left">
+									<img src="../images/product-start-3.png">
+									<img src="../images/product-start-3.png">
+									<img src="../images/product-start-3.png">
+									<img src="../images/product-start-3.png">
+									<img src="../images/product-start-3.png">
+									<p class="font-gray mgT10">2016-12-11 21:11</p>
+									<p>解忧杂货店</p>
+								</div>
+								<div class="div2-main-right">
+									<div class="div2-main-productDetails">
+										<p>经典的解忧杂货店，买了无本杂货店方面的书，非常实用。包装很好，没有破损，没有褶皱，开心。经典的解忧杂货店，买了无本杂货店方面的书，非常实用。包装很好，没有破损，没有褶皱，开心。</p>
+										
+									</div>
+									<div class="div2-main-user">
+										<img src="../images/user-head.jpg">
+										<p class="mgT5">赵一达</p>
+									</div>
+								</div>
+
+							</li>
+							
+							<li>
+								<div class="div2-main-left">
+									<img src="../images/product-start-3.png">
+									<img src="../images/product-start-3.png">
+									<img src="../images/product-start-3.png">
+									<img src="../images/product-start-3.png">
+									<img src="../images/product-start-3.png">
+									<p class="font-gray mgT10">2016-12-11 21:11</p>
+									<p>解忧杂货店</p>
+								</div>
+								<div class="div2-main-right">
+									<div class="div2-main-productDetails">
+										<p>经典的解忧杂货店，买了无本杂货店方面的书，非常实用。包装很好，没有破损，没有褶皱，开心。经典的解忧杂货店，买了无本杂货店方面的书，非常实用。包装很好，没有破损，没有褶皱，开心。</p>
+										
+									</div>
+									<div class="div2-main-user">
+										<img src="../images/user-head.jpg">
+										<p class="mgT5">赵一达</p>
+									</div>
+								</div>
+
+							</li>
+							
+							<li>
+								<div class="div2-main-left">
+									<img src="../images/product-start-3.png">
+									<img src="../images/product-start-3.png">
+									<img src="../images/product-start-3.png">
+									<img src="../images/product-start-3.png">
+									<img src="../images/product-start-3.png">
+									<p class="font-gray mgT10">2016-12-11 21:11</p>
+									<p>解忧杂货店</p>
+								</div>
+								<div class="div2-main-right">
+									<div class="div2-main-productDetails">
+										<p>经典的解忧杂货店，买了无本杂货店方面的书，非常实用。包装很好，没有破损，没有褶皱，开心。经典的解忧杂货店，买了无本杂货店方面的书，非常实用。包装很好，没有破损，没有褶皱，开心。</p>
+										
+									</div>
+									<div class="div2-main-user">
+										<img src="../images/user-head.jpg">
+										<p class="mgT5">赵一达</p>
+									</div>
+								</div>
+
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</div>
+
+<div class="footer">
+	<div class="container clearfix">
+    	<ul class="wd25">
+        	<li><a href="#" class="block"><h4>售后服务</h4></a></li>
+			<li><a href="#" class="block">退换货原则</a></li>
+        </ul>
+        <ul class="wd25">
+        	<li><a href="#" class="block"><h4>我的订单</h4></a></li>
+			<li><a href="#" class="block">订单状态的含义</a></li>
+			<li><a href="#" class="block">订单费用计算</a></li>
+			<li><a href="#" class="block">订单的修改与取消</a></li>
+        </ul>
+		<ul class="wd25">
+        	<li><a href="#" class="block"><h4>订单支付</h4></a></li>
+			<li><a href="#" class="block">在线支付</a></li>
+			<li><a href="#" class="block">货到付款</a></li>
+			<li><a href="#" class="block">退款及发票制度</a></li>
+        </ul>
+		<ul class="wd25">
+        	<li><a href="#" class="block"><h4>联系我们</h4></a></li>
+			<li><a href="#" class="block">意见与建议</a></li>
+			<li><a href="#" class="block">联系我们</a></li>
+		</ul>
+    </div>
+	<div class="pic">
+        	Copyright©即墨城新华书店集团有限公司 All rights reserved 鲁ICP备11111111号-1
+        </div>
+</div>
+</body>
+<script>
+$(document).ready(function(){
+  $(".get-discount").click(function(){
+   $(".get-discount-ul").removeClass("hide");
+});
+	$(".discount-ul-close").click(function(){
+   $(".get-discount-ul").addClass("hide");
+});
+});
+</script>
+</html>

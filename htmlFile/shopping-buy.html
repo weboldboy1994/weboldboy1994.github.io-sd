@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <title>书城</title>
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/page.css">
+    <script src="../js/jquery-1.11.1.js"></script>
+    <script src="../js/swipe.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="header">
+	<div class="container">
+    	<div class="row">
+        	<div class="col-md-6 logo pull-left">
+            	<a href="#"><img src="../images/logo.jpg"></a>
+            </div>
+            <div class="col-md-6 pull-right">
+            	<div class="collect text-right">
+					<a href="login.html" onclick="SetHome(this,window.location)">登录</a> | 
+					<a href="register.html" onclick="SetFavourite(document.title,window.location)">注册</a>
+				</div>
+                <div class="search col-md-6 pull-left">
+					<form method="get" id="searchform" action="/demos/finance/index.php">
+						<input name="s" id="s" type="text" class="text" placeholder="新闻/书名/ISBN/资源..." value="">
+						<div class=""><i class="submit fa fa-search"></i></div>
+											
+					</form>
+
+                </div>
+				<div class="col-md-6 clearfix pull-right">
+					<a class="pull-right btn-indent" href="personal.html">个人中心
+					</a>
+					<a class="pull-right btn-shoping" href="shopping-cart.html"><i class="fa fa-shopping-cart font18"></i> 购物车 <span>0</span>
+					</a>
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+    	<div class="container">
+        	<ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="news-centre.html">新闻中心</a></li>
+                <li><a href="company-profile.html">企业概况</a></li>
+                <li><a href="distribution.html">新华分销</a></li>
+                <li><a href="books-city.html">网上书城</a></li>
+                <li><a href="product-list.html">产品列表</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+	<div class="bg-gray pd5-20">
+		<div class="container">首页>网上书城>个人中心>我的购物车
+		</div>
+	</div>
+<div class="container">
+	<ul class="container-nav">
+		<li class="wd33">我的购物车</li>
+		<li class="wd33 select">确认订单信息</li>
+		<li class="wd33">成功提交订单</li>
+	</ul>
+    <div class="category">
+			<div class="c-newslist strong font18 mgB10 clearfix">收货人信息
+				<a class="pull-right font-gray font14">更多地址>></a>
+			</div>
+			<ul class="shopping-addr clearfix">
+				<li>
+
+					<a class="block" data-toggle="modal" data-target="#myModal">
+					新增收货地址 +
+					</a>
+					
+					
+					
+					
+					
+				</li>
+				
+				<li>
+					<a class="block">
+						<div class="border-bt-solid clearfix strong">
+							<p class="wd50">米饭饭</p>
+							<p class="wd50 text-right">182****8734</p>
+						</div>
+						<div class="pdT10">
+							<p>中国 山东 枣庄市 市中区</p>
+							<p>市中区23号枣庄市图书馆</p>
+						</div>
+					</a>
+					<div class="clearfix mgT20">
+						<a class="font-red">编辑</a>
+						<a class="font-red mgL20">删除</a>
+						<a class="font-red mgL20 pull-right">设为默认地址</a>	
+					</div>
+				</li>
+				<li>
+					<a class="block">
+						<div class="border-bt-solid clearfix strong">
+							<p class="wd50">米饭饭</p>
+							<p class="wd50 text-right">182****8734</p>
+						</div>
+						<div class="pdT10">
+							<p>中国 山东 枣庄市 市中区</p>
+							<p>市中区23号枣庄市图书馆</p>
+						</div>
+					</a>
+					<div class="clearfix mgT20">
+						<a class="font-red">编辑</a>
+						<a class="font-red mgL20">删除</a>
+						<a class="font-red mgL20 pull-right">设为默认地址</a>	
+					</div>
+				</li>
+				<li>
+					<a class="block">
+						<div class="border-bt-solid clearfix strong">
+							<p class="wd50">米饭饭</p>
+							<p class="wd50 text-right">182****8734</p>
+						</div>
+						<div class="pdT10">
+							<p>中国 山东 枣庄市 市中区</p>
+							<p>市中区23号枣庄市图书馆</p>
+						</div>
+					</a>
+					<div class="clearfix mgT20">
+						<a class="font-red">编辑</a>
+						<a class="font-red mgL20">删除</a>
+						<a class="font-red mgL20 pull-right">设为默认地址</a>	
+					</div>
+				</li>
+			</ul>
+		<div class="c-newslist strong font18 mgB10">送货清单</div>
+    	<div class="shopping-succeed shopping mgB20">
+			<div class="clearfix succeed-left-bottom shopping-cart-top">
+					<div class="wd10"><img src="../images/index-book1.jpg"></div>
+					<div class="wd18 mgT20"><span class="mgL20">猫头鹰的咖啡馆</span></div>
+					<div class="wd18 mgT20">
+						<p>￥35.40<span>（71折）</span></p>
+					</div>
+					<div class="wd18 mgT20">
+						<p>￥49.80</p>
+					</div>
+					<div class="wd18 mgT20">
+						<p>一件商品</p>
+					</div>
+					<div class="wd18 mgT20">
+						<p>总计 <span> ￥35.40</span></p>
+					</div>
+			</div>
+			<div class="clearfix shopping-cart-bottom">
+				<div class="wd33 pull-right">
+					<div class="clearfix wd100">
+						<p class="wd50 right">
+							合计（不含运费）
+						</p>
+						<p class="wd50">
+							<span class="font18 font-red">￥35.40</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="c-newslist strong font18 mgB10">支付方式</div>
+		<div class="clearfix mgB20">
+			<a class="block btn-shoping-pay pull-left mgR10">网上支付</a>
+			<a class="block btn-shoping-pay-gray pull-left mgR10">网上支付</a>
+			<a class="block btn-shoping-pay-gray pull-left mgR10">网上支付</a>
+		</div>
+		
+		<div class="c-newslist strong font18 mgB10">发票</div>
+		<div class="clearfix pdB20 border-bt-solid">
+			<a class="pull-left check-yes-no"><i class="block fa fa-check" aria-hidden="true"></i></a>
+			<div class="pull-left mgL10">需要开具发票</div>
+			<a class="pull-left mgL10 font-blue">修改</a>
+		</div>
+		<div class="clearfix border-bt-solid">
+			<div class="mgT10 mgB10 clearfix">
+				<a class="pull-left check-open-close"><i class="block fa fa-minus" aria-hidden="true"></i></a>
+				<div class="pull-left mgL10">积分</div>
+			</div>
+			<div class="shopping-credits">
+				<div class="pdL30 mgB20">
+					您的账户中积分功<span class="font-red"></span>个，可抵扣0.3元（3000积分抵扣一元，最小使用0.1元）
+				</div>
+				<div class="pdL30 clearfix mgB10">
+					<a class="pull-left check-yes-no"></a>
+					<div class="pull-left mgL10">使用</div>
+					<input class="pull-left mgL10 shopping-money-input">
+					<div class="pull-left mgL10">元</div>
+				</div>
+			</div>
+			
+			<div class="mgT10 mgB10 clearfix">
+				<a class="pull-left check-open-close get-discount"><i class="block fa fa-plus" aria-hidden="true"></i></a>
+				<a class="pull-left mgL10 get-discount">优惠券</a>
+				
+			</div>
+			<ul class="get-discount-ul relative hide mgB10">
+				<li class="clearfix">
+					<div class="pull-left">￥20</div>
+					<div class="pull-right">
+						满100减20
+						<a class="font-red mgL5">使用</a>
+					</div>
+				</li>
+				<li class="clearfix">
+					<div class="pull-left">￥20</div>
+					<div class="pull-right">
+						满100减20
+						<a class="font-red mgL5">使用</a>
+					</div>
+				</li>
+				<li class="clearfix">
+					<div class="pull-left">￥20</div>
+					<div class="pull-right">
+						满100减20
+						<a class="font-red mgL5">使用</a>
+					</div>
+				</li>
+				<a class="discount-ul-close">
+					<i class="fa fa-times"></i>
+				</a>
+			</ul>
+			<div class="shopping-discount hide">
+			</div>
+		</div>
+		<div class="clearfix">
+			<div class="wd20 pull-right">
+				<div class="border-bt-solid pdBT15 text-center">
+					<p>商品金额：<span>35.40</span></p>
+					<div>运费：<span>0.00</span></div>
+				</div>
+				<div class="pdBT15 text-center">
+					<p>应付金额：<span class="font-red font18">￥35.40</span></p>
+				</div>
+			</div>
+		</div>
+		<div class="shopping-bottom-buy clearfix">
+			<a class="block btn-shoping-pay2 pull-right" href="shopping-payment.html">提交订单</a>
+			<div class="pull-right font12 mgR10">（含运费<span class="font-red">0.00</span>元）</div>
+			<div class="pull-right mgR10 font-red font18">35.40</div>
+			<div class="pull-right mgR10">应付金额：</div>
+			<div class="pull-right mgR10">共<span class="font-red">1</span>件商品</div>
+		</div>
+    </div>  
+</div>
+	<div class="modal modal-big fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
+					</button>
+					<h4 class="modal-title font-red" id="myModalLabel">
+						添加新地址
+					</h4>
+					<!--<h4 class="modal-title font-red" id="myModalLabel">
+						失败
+					</h4>-->
+				</div>
+				<ul class="distribution-input mgL100">
+					<li>
+						<label class="wd18">收货人姓名：</label> 
+						<input type="text" class="form-input wd50" placeholder="姓名">
+					</li>
+					<li>
+						<label class="wd18">手机号码：</label> 
+						<input type="text" class="form-input wd50" placeholder="手机号">
+					</li>
+					<li>
+						<label class="wd18">所在地区：</label> 
+						<div class="btn-group">
+					<button type="button" class="btn btn-default dropdown-toggle" 
+							data-toggle="dropdown">
+						省份/自治区 <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu select-ul-address" role="menu">
+						<li><a href="#">北京</a></li>
+						<li><a href="#">上海</a></li>
+						<li><a href="#">山东</a></li>
+						<li><a href="#">北京</a></li>
+						<li><a href="#">上海</a></li>
+						<li><a href="#">山东</a></li>
+						<li><a href="#">北京</a></li>
+						<li><a href="#">上海</a></li>
+						<li><a href="#">山东</a></li>
+						<li><a href="#">北京</a></li>
+						<li><a href="#">上海</a></li>
+						<li><a href="#">山东</a></li>
+					</ul>
+				</div>
+				<div class="btn-group">
+					<button type="button" class="btn btn-default dropdown-toggle" 
+							data-toggle="dropdown">
+						城市/地区 <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu select-ul-address" role="menu">
+						<li><a href="#">青岛</a></li>
+						<li><a href="#">济南</a></li>
+						<li><a href="#">烟台</a></li>
+						<li><a href="#">青岛</a></li>
+						<li><a href="#">济南</a></li>
+						<li><a href="#">烟台</a></li>
+						<li><a href="#">青岛</a></li>
+						<li><a href="#">济南</a></li>
+						<li><a href="#">烟台</a></li>
+						<li><a href="#">青岛</a></li>
+						<li><a href="#">济南</a></li>
+						<li><a href="#">烟台</a></li>
+					</ul>
+				</div>
+				<div class="btn-group">
+					<button type="button" class="btn btn-default dropdown-toggle" 
+							data-toggle="dropdown">
+						区/县 <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu select-ul-address" role="menu">
+						<li><a href="#">招远</a></li>
+						<li><a href="#">栖霞</a></li>
+						<li><a href="#">牟平</a></li>
+						<li><a href="#">招远</a></li>
+						<li><a href="#">栖霞</a></li>
+						<li><a href="#">牟平</a></li>
+						<li><a href="#">招远</a></li>
+						<li><a href="#">栖霞</a></li>
+						<li><a href="#">牟平</a></li>
+						<li><a href="#">招远</a></li>
+						<li><a href="#">栖霞</a></li>
+						<li><a href="#">牟平</a></li>
+					</ul>
+				</div>
+					</li>
+					<li>
+						<label class="wd18">详细地址：</label> 
+						<textarea class="form-control wd50" rows="3" placeholder="详细地址"></textarea>
+					</li>
+					<li>
+						<label class="wd18">邮政编码：</label> 
+						<input type="text" class="form-input wd50" placeholder="邮政编码">
+					</li>
+				</ul>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消
+					</button>
+					<button type="button" class="btn btn-red">
+						保存
+					</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+<div class="footer">
+	<div class="container clearfix">
+    	<ul class="wd25">
+        	<li><a href="#" class="block"><h4>售后服务</h4></a></li>
+			<li><a href="#" class="block">退换货原则</a></li>
+        </ul>
+        <ul class="wd25">
+        	<li><a href="#" class="block"><h4>我的订单</h4></a></li>
+			<li><a href="#" class="block">订单状态的含义</a></li>
+			<li><a href="#" class="block">订单费用计算</a></li>
+			<li><a href="#" class="block">订单的修改与取消</a></li>
+        </ul>
+		<ul class="wd25">
+        	<li><a href="#" class="block"><h4>订单支付</h4></a></li>
+			<li><a href="#" class="block">在线支付</a></li>
+			<li><a href="#" class="block">货到付款</a></li>
+			<li><a href="#" class="block">退款及发票制度</a></li>
+        </ul>
+		<ul class="wd25">
+        	<li><a href="#" class="block"><h4>联系我们</h4></a></li>
+			<li><a href="#" class="block">意见与建议</a></li>
+			<li><a href="#" class="block">联系我们</a></li>
+		</ul>
+    </div>
+	<div class="pic">
+        	Copyright©即墨城新华书店集团有限公司 All rights reserved 鲁ICP备11111111号-1
+        </div>
+</div>
+</body>
+<script>
+$(document).ready(function(){
+  $(".get-discount").click(function(){
+   $(".get-discount-ul").removeClass("hide");
+});
+	$(".discount-ul-close").click(function(){
+   $(".get-discount-ul").addClass("hide");
+});
+});
+</script>
+</html>
